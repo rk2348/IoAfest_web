@@ -464,7 +464,22 @@
             .social-btn { width: 100%; box-sizing: border-box; }
             body, .game-card, .social-btn:hover { cursor: auto; }
             .cursor, .cursor-follower { display: none; }
-            .modal-gallery { grid-template-columns: 1fr; } /* スマホでは画像を縦1列に */
+            .modal-gallery { grid-template-columns: 1fr; }
+
+            /* ▼▼ ここから追加・変更 ▼▼ */
+            
+            /* セクションの左右の余白を 10% → 5% に減らして表示領域を広げる */
+            section { padding: 80px 5%; }
+            
+            /* カードの最低幅(320px)の制限をなくし、スマホでは1列にスッキリ収める */
+            .games-grid { 
+                grid-template-columns: 1fr; 
+                gap: 30px; 
+            }
+
+            /* 念のため、上部のInfoカードの内側余白もスマホ向けに少し狭くしておくと綺麗です */
+            .info-card { padding: 20px; }
+            .info-block { padding: 15px; }
         }
     </style>
 </head>
